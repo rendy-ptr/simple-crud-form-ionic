@@ -1,0 +1,138 @@
+/* history.page.scss */
+ion-header {
+    --ion-background-color: #007bff; /* Warna latar belakang header */
+  }
+  
+  ion-toolbar {
+    color: #ffffff; /* Warna teks toolbar */
+    text-transform: uppercase; /* Kapitalkan teks di toolbar */
+  }
+  
+  ion-title {
+    font-size: 24px;
+  }
+  
+  ion-content {
+    --ion-background-color: #f9f9f9; /* Ganti warna latar belakang konten */
+  }
+  
+  /* Warna teks pada riwayat pengiriman */
+  ion-item {
+    color: #333333;
+  }
+  
+  /* Tambahkan efek bayangan untuk setiap riwayat pengiriman */
+  ion-item {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Atur jarak antar item */
+  ion-item {
+    margin-bottom: 12px;
+  }
+  
+  /* Efek hover pada tombol "Edit" dan "Delete" */
+  ion-button {
+    transition: transform 0.2s ease;
+  }
+  
+  ion-button:hover {
+    transform: scale(1.05); /* Animasi saat tombol dihover */
+  }
+  
+  /* Gaya pesan ketika belum ada riwayat pengiriman */
+  ion-note {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #777777;
+    font-style: italic;
+  }
+  
+  /* Gaya tombol kembali */
+  ion-button[routerLink='/home'] {
+    --background: #007bff; /* Warna latar belakang tombol */
+    --color: #ffffff; /* Warna teks tombol */
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tambahkan animasi ketika tombol kembali dihover */
+  ion-button[routerLink='/home']:hover {
+    --background: #0056b3;
+  }
+  
+  /* Gaya label di item riwayat pengiriman */
+  ion-label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  /* Atur jarak antara label dan tombol pada setiap item */
+  ion-item ion-label {
+    flex: 1;
+  }
+  
+  /* Gaya tombol "Edit" dan "Delete" pada setiap item */
+  ion-button {
+    --padding-start: 12px;
+    --padding-end: 12px;
+    margin-right: 8px;
+    --background: transparent;
+    --color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Gaya garis bawah pada tombol "Edit" dan "Delete" */
+  ion-button::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #007bff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Animasi garis bawah saat tombol "Edit" dan "Delete" dihover */
+  ion-button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Tambahkan padding untuk label */
+  ion-label p {
+    margin-bottom: 5px;
+  }
+  
+  /* Tambahkan garis bawah untuk setiap item riwayat pengiriman */
+  ion-item {
+    position: relative;
+  }
+  
+  /* Gaya pesan sukses */
+  ion-item.has-success ion-label::before {
+    content: '\f058';
+    font-family: ionicons;
+    font-size: 24px;
+    color: #28a745;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Tampilan pesan sukses (hide saat tidak valid) */
+  ion-item:not(.has-success) ion-label::before {
+    display: none;
+  }
+  
+  /* Animasi tampilan pesan sukses */
+  ion-item.has-success ion-label,
+  ion-item.has-success ion-input {
+    transition: all 0.3s;
+  }
+  

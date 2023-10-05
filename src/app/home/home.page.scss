@@ -1,27 +1,118 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* home.page.scss */
+ion-content {
+  --ion-background-color: #f9f9f9; /* Ganti warna latar belakang konten */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Tampilan form */
+ion-item {
+  --ion-background-color: #ffffff; /* Warna latar belakang item */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  --padding-start: 16px; /* Jarak padding kiri */
+  --padding-end: 16px; /* Jarak padding kanan */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-label {
+  color: #333333; /* Warna teks label */
+  font-weight: bold;
 }
 
-#container a {
-  text-decoration: none;
+ion-input {
+  border-color: #dddddd; /* Warna garis bawah input */
+  border-radius: 4px;
+  --padding-start: 12px; /* Jarak padding kiri input */
 }
+
+/* Placeholder pada input */
+ion-input::placeholder {
+  color: #999999;
+}
+
+/* Tampilan tombol Kirim */
+ion-button.expand-full {
+  --background: #007bff; /* Warna latar belakang tombol */
+  --color: #ffffff; /* Warna teks tombol */
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-button.expand-full:last-child {
+  margin-bottom: 0;
+}
+
+/* Animasi tombol */
+ion-button {
+  transition: transform 0.2s ease;
+}
+
+ion-button:hover {
+  transform: scale(1.05); /* Animasi saat tombol dihover */
+}
+
+/* Tampilan header */
+ion-header {
+  --ion-background-color: #007bff; /* Warna latar belakang header */
+}
+
+ion-toolbar {
+  color: #ffffff; /* Warna teks toolbar */
+}
+
+/* Tampilan konten */
+ion-content {
+  --ion-background-color: #f9f9f9; /* Ganti warna latar belakang konten */
+}
+
+/* Warna teks tombol Show History */
+ion-button[routerLink='/history'] {
+  --color: #f0f0f0;
+}
+
+/* Warna latar belakang tombol Show History saat dihover */
+ion-button[routerLink='/history']:hover {
+  --background: #f0f0f0;
+  --color: #007bff;
+}
+
+/* Tampilan error pesan validasi */
+ion-item.has-error ion-label::after {
+  content: '*';
+  color: #ff0000; /* Warna teks asterisk merah untuk pesan error */
+}
+
+/* Animasi tampilan kesalahan */
+ion-item.has-error ion-label,
+ion-item.has-error ion-input {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Tampilan judul halaman */
+ion-title {
+  font-size: 24px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+

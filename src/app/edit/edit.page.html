@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Form Pendaftaran
+      Edit Form
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,36 +9,36 @@
 <ion-content>
   <ion-item>
     <ion-label position="floating">Nama Lengkap</ion-label>
-    <ion-input [(ngModel)]="nama_lengkap"></ion-input>
+    <ion-input [(ngModel)]="item.nama_lengkap"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Tempat, Tanggal Lahir</ion-label>
-    <ion-input [(ngModel)]="ttl"></ion-input>
+    <ion-input [(ngModel)]="item.ttl"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Agama</ion-label>
-    <ion-input [(ngModel)]="agama"></ion-input>
+    <ion-input [(ngModel)]="item.agama"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Alamat Lengkap</ion-label>
-    <ion-input [(ngModel)]="alamat_lengkap"></ion-input>
+    <ion-input [(ngModel)]="item.alamat_lengkap"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Asal Sekolah</ion-label>
-    <ion-input [(ngModel)]="asal_sekolah"></ion-input>
+    <ion-input [(ngModel)]="item.asal_sekolah"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Jenis Kelamin</ion-label>
-    <ion-input [(ngModel)]="jenis_kelamin"></ion-input>
+    <ion-input [(ngModel)]="item.jenis_kelamin"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Nomor Telepon</ion-label>
-    <ion-input [(ngModel)]="nomor_telepon"></ion-input>
+    <ion-input [(ngModel)]="item.nomor_telepon"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Email</ion-label>
-    <ion-input [(ngModel)]="email"></ion-input>
+    <ion-input [(ngModel)]="item.email"></ion-input>
   </ion-item>
-  <ion-button expand="full" (click)="kirimForm()">Kirim</ion-button>
-  <ion-button expand="full" routerLink="/history">Show Data</ion-button>
+  <ion-button expand="full" (click)="updateItem()">Simpan</ion-button>
+  <ion-button expand="full" (click)="cancelEdit()">Batal</ion-button>
 </ion-content>

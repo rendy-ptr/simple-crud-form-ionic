@@ -1,0 +1,70 @@
+/* edit.page.scss */
+ion-header {
+    --ion-background-color: #007bff; /* Warna latar belakang header */
+  }
+  
+  ion-toolbar {
+    color: #ffffff; /* Warna teks toolbar */
+  }
+  
+  ion-title {
+    font-size: 24px;
+  }
+  
+  ion-content {
+    --ion-background-color: #f9f9f9; /* Ganti warna latar belakang konten */
+  }
+  
+  /* Tampilan form */
+  ion-item {
+    --ion-background-color: #ffffff; /* Warna latar belakang item */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    --padding-start: 16px; /* Jarak padding kiri */
+    --padding-end: 16px; /* Jarak padding kanan */
+  }
+  
+  ion-label {
+    color: #333333; /* Warna teks label */
+    font-weight: bold;
+  }
+  
+  ion-input {
+    border-color: #dddddd; /* Warna garis bawah input */
+    border-radius: 4px;
+    --padding-start: 12px; /* Jarak padding kiri input */
+  }
+  
+  /* Placeholder pada input */
+  ion-input::placeholder {
+    color: #999999;
+  }
+  
+  /* Tampilan tombol Simpan */
+  ion-button.expand-full:first-child {
+    --background: #007bff; /* Warna latar belakang tombol Simpan */
+    --color: #ffffff; /* Warna teks tombol Simpan */
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tampilan tombol Batal */
+  ion-button.expand-full:last-child {
+    --background: #e74c3c; /* Warna latar belakang tombol Batal */
+    --color: #ffffff; /* Warna teks tombol Batal */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tampilan tombol Simpan saat dihover */
+  ion-button.expand-full:first-child:hover {
+    --background: #0056b3;
+  }
+  
+  /* Tampilan tombol Batal saat dihover */
+  ion-button.expand-full:last-child:hover {
+    --background: #c0392b;
+  }
+  

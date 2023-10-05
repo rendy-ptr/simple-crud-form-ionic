@@ -1,4 +1,5 @@
 import { CapacitorConfig } from '@capacitor/cli';
+import { BrowserPlugin } from '@capacitor/browser';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
@@ -6,6 +7,11 @@ const config: CapacitorConfig = {
   webDir: 'www',
   server: {
     androidScheme: 'https'
+  },
+  plugins: {
+    Browser: {
+      backgroundColor: '#ffffff'
+    }
   }
 };
 

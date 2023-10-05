@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      List Data
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="history.length > 0">
+    <ion-item *ngFor="let item of history">
+      <ion-label>
+        <p>Nama Lengkap: {{ item.nama_lengkap }}</p>
+        <p>TTL: {{ item.ttl }}</p>
+        <p>Agama: {{ item.agama }}</p>
+        <p>Alamat Lengkap: {{ item.alamat_lengkap }}</p>
+        <p>Asal Sekolah: {{ item.asal_sekolah }}</p>
+        <p>Jenis Kelamin: {{ item.jenis_kelamin }}</p>
+        <p>Nomor Telepon: {{ item.nomor_telepon }}</p>
+        <p>Email: {{ item.email }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="editItem(item)">Edit</ion-button>
+        <ion-button (click)="deleteItem(item)">Delete</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-note *ngIf="history.length === 0">Belum ada riwayat pengiriman.</ion-note>
+  <ion-button expand="full" routerLink="/home">Kembali</ion-button>
+</ion-content>
